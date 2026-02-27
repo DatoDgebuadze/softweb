@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Softon</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <section class="logo">
+        <a href="index.html">
+          <img src="img/header-logo.png" alt="header logo">
+        </a>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" class="contact" data-i18n="nav_contact">Contact Us</a></li>
+          <li>
+            <button type="button" class="lang-toggle" aria-label="Switch language" data-i18n-attr="aria-label:switch_language">
+              <img src="img/uk.png" alt="Georgian">
+            </button>
+          </li>
+          <li class="menu-icon">
+            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+              <img src="img/menu_icon.png" alt="menu icon">
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-section">
+
+    <picture>
+      <source media="(max-width : 576px)" srcset="img/hero-mobile.jpg">
+      <!-- <source media="(max-width : 960px)" srcset="img/hero-tablet.jpg">
+      <source media="(max-width : 1440px)" srcset="img/hero-desktop.jpg"> -->
+      <img src="img/hero-large-desktop.jpg" alt="hero image">
+    </picture>
+
+    <section class="hero-content">
+      <div class="container">
+        <h1 data-i18n="home_hero_title">Turning idea into living software</h1>
+        <p data-i18n="home_hero_subtitle">From concept to launch,
+          we craft software that evolves and delivers real value</p>
+        <button type="button" onclick="location.href='contact.html#send-message'" data-i18n="home_hero_cta">
+          Request a consultation
+        </button>
+      </div>
+    </section>
+
+  </section>
+
+  <section class="stats-section">
+
+    <div class="container">
+      <ul class="stats-list">
+        <li>
+          <span class="stat-number">56</span>
+          <span class="stat-label" data-i18n="stats_successful_projects">Successful Projects</span>
+        </li>
+        <li class="stat-divider"></li>
+        <li>
+          <span class="stat-number">39</span>
+          <span class="stat-label" data-i18n="stats_satisfied_clients">Satisfied Clients</span>
+        </li>
+        <li class="stat-divider"></li>
+        <li>
+          <span class="stat-number">16</span>
+          <span class="stat-label" data-i18n="stats_team_members">Team Members</span>
+        </li>
+        <li class="stat-divider"></li>
+        <li>
+          <span class="stat-number">47</span>
+          <span class="stat-label" data-i18n="stats_partners">Partners</span>
+        </li>
+      </ul>
+    </div>
+
+  </section>
+
+  <section class="offer-section">
+    <div class="container">
+
+      <div class="offer-header">
+        <h2 data-i18n="home_offer_title">What We Offer</h2>
+        <p data-i18n="home_offer_subtitle">
+          We help businesses turn ideas into reliable, scalable, and
+          user-friendly digital products.
+        </p>
+      </div>
+
+      <div class="offer-grid">
+
+        <a href="services.html#web-development" class="offer-card">
+          <img src="/img/what-we-offer/web-dev-logo.png" alt="Custom software">
+          <h3 data-i18n="offer_web_title">Web Development</h3>
+          <p data-i18n="offer_web_desc">
+            Fast, responsive, and modern websites built for performance,
+            accessibility, and scalability.
+          </p>
+        </a>
+
+        <a href="services.html#mobile-app-development" class="offer-card">
+          <img src="/img/what-we-offer/mobile-dev-logo.png" alt="Scalable architecture">
+          <h3 data-i18n="offer_mobile_title">Mobile App Development</h3>
+          <p data-i18n="offer_mobile_desc">
+            Intuitive mobile apps for iOS and Android with smooth performance
+            and user-focused design.
+          </p>
+        </a>
+
+        <a href="services.html#digital-product-design" class="offer-card">
+          <img src="/img/what-we-offer/UX-UI-logo.png" alt="UI UX design">
+          <h3 data-i18n="offer_design_title">Digital Product Designs</h3>
+          <p data-i18n="offer_design_desc">
+            Clean, intuitive interfaces designed to improve usability,
+            engagement, and user satisfaction.
+          </p>
+        </a>
+
+        <a href="services.html#mvp-development" class="offer-card">
+          <img src="/img/what-we-offer/mvp-logo.png" alt="Agile development">
+          <h3 data-i18n="offer_mvp_title">MVP Development</h3>
+          <p data-i18n="offer_mvp_desc">
+            Rapid MVP development to validate ideas, gather feedback,
+            and launch faster.
+          </p>
+        </a>
+
+        <a href="services.html#custom-software-development" class="offer-card">
+          <img src="/img/what-we-offer/custom-dev-logo.png" alt="Communication">
+          <h3 data-i18n="offer_custom_title">Custom Software Development</h3>
+          <p data-i18n="offer_custom_desc">
+            Custom software solutions aligned with your business goals,
+            workflows, and growth plans.
+          </p>
+        </a>
+
+
+        <a href="contact.html#send-message" class="offer-card">
+          <img src="/img/what-we-offer/tech-support-logo.png" alt="Support">
+          <h3 data-i18n="offer_support_title">Long-Term Support</h3>
+          <p data-i18n="offer_support_desc">
+            Reliable maintenance, monitoring, and continuous improvements
+            to keep your product running smoothly.
+          </p>
+        </a>
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="why-softon-section">
+    <picture>
+      <img src="/img/tech-city.png" alt="tech-city-image">
+    </picture>
+  </section>
+
+  <section class="partners-section">
+    <div class="container">
+      <h1 data-i18n="our_partner">Our Partners</h1>
+
+      <div class="partners-carousel">
+        <div class="partners-marquee">
+          <div class="partners-track">
+            <!-- <div class="partners-slider"> -->
+            <!-- Original -->
+            <div class="partner-item"><img src="/img/partners/tbc-logo.png" alt="TBV"></div>
+            <div class="partner-item"><img src="/img/partners/bog-logo.png" alt="BOG"></div>
+            <div class="partner-item"><img src="/img/partners/credo-logo.png" alt="CREDO"></div>
+            <div class="partner-item"><img src="/img/partners/tbilisi-city-hall-logo.png" alt="Tbilisi City Hall"></div>
+            <div class="partner-item"><img src="/img/partners/nbg-logo-01.png" alt="NBG"></div>
+            <div class="partner-item"><img src="/img/partners/magti-logo.png" alt="Magti"></div>
+            <div class="partner-item"><img src="/img/partners/silknet-logo.png" alt="Silknet"></div>
+            <!-- </div> -->
+
+            <!-- Duplicated -->
+            <!-- <div aria-hidden class="partners-slider"> -->
+            <div class="partner-item"><img src="/img/partners/tbc-logo.png" alt="TBV"></div>
+            <div class="partner-item"><img src="/img/partners/bog-logo.png" alt="BOG"></div>
+            <div class="partner-item"><img src="/img/partners/credo-logo.png" alt="CREDO"></div>
+            <div class="partner-item"><img src="/img/partners/tbilisi-city-hall-logo.png" alt="Tbilisi City Hall"></div>
+            <div class="partner-item"><img src="/img/partners/nbg-logo-01.png" alt="NBG"></div>
+            <div class="partner-item"><img src="/img/partners/magti-logo.png" alt="Magti"></div>
+            <div class="partner-item"><img src="/img/partners/silknet-logo.png" alt="Silknet"></div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="index.html"> <img src="img/header-logo.png" alt="footer company logo">
+          </a>
+        </li>
+        <li class="footer-contact"><img src="img/footer-logos/location.png" alt="Location">Georgia Tbilisi Chavcahvade
+        </li>
+        <li class="footer-contact"><img src="img/footer-logos/phone-call.png" alt="Phone number">+995 500 00 00 07</li>
+        <li class="footer-contact"><img src="img/footer-logos/email.png" alt="Email">info@softon.ge</li>
+        <li>
+          <ul class="social-logos">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="img/footer-logos/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="img/footer-logos/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img src="img/footer-logos/tiktok.png" alt="TikTok"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="img/footer-logos/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="services.html" class="list-title" data-i18n="footer_services_title">Services</a></li>
+        <li><a href="services.html#web-development" data-i18n="footer_web_dev">Web development</a></li>
+        <li><a href="services.html#mobile-app-development" data-i18n="footer_mobile_dev">Mobile app development</a></li>
+        <li><a href="services.html#digital-product-design" data-i18n="footer_design">Digital product designs</a></li>
+        <li><a href="services.html#mvp-development" data-i18n="footer_mvp">MVP development</a></li>
+        <li><a href="services.html#custom-software-development" data-i18n="footer_custom">Custom Software development</a></li>
+        <li><a href="contact.html#send-message" data-i18n="footer_support">Long-Term Support</a></li>
+      </ul>
+      <ul>
+        <li><a href="projects.html" class="list-title" data-i18n="footer_projects_title">Projects</a></li>
+        <li><a href="projects.html#healthcare-industry" data-i18n="footer_healthcare">Healthcare Industry</a></li>
+        <li><a href="projects.html#fintech-industry" data-i18n="footer_fintech">Fintech Website</a></li>
+        <li><a href="projects.html#ecommerce-furniture-shop" data-i18n="footer_furniture">E-Commerce Furniture shop</a></li>
+        <li><a href="projects.html#burger-bar" data-i18n="footer_burger">Burger Bar Website</a></li>
+        <li><a href="projects.html#crm-system" data-i18n="footer_crm">Gym CRM system</a></li>
+        <li><a href="projects.html#educity-educational-center" data-i18n="footer_educity">Educity - Educational center</a></li>
+      </ul>
+      <ul>
+        <li><a href="about.html" class="list-title" data-i18n="footer_about_title">About us</a></li>
+        <li><a href="about.html#about-company" data-i18n="footer_about_company">About the company</a></li>
+        <li><a href="about.html#company-mission" data-i18n="footer_company_mission">Company Mission</a></li>
+        <li><a href="about.html#our-vision" data-i18n="footer_our_vision">Our Vision</a></li>
+        <li><a href="about.html#team" data-i18n="footer_team">Team</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <section class="copyright">
+    <span data-i18n="copyright">2026 &reg; All Rights Reserved</span>
+  </section>
+
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
+
+

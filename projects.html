@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Softon</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <section class="logo">
+        <a href="index.html">
+          <img src="img/header-logo.png" alt="header logo">
+        </a>
+      </section>
+      <nav>
+        <ul>
+          <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+          <li><a href="projects.html" data-i18n="nav_projects">Projects</a></li>
+          <li><a href="about.html" data-i18n="nav_about">About</a></li>
+          <li><a href="contact.html" class="contact" data-i18n="nav_contact">Contact Us</a></li>
+          <li>
+            <button type="button" class="lang-toggle" aria-label="Switch language" data-i18n-attr="aria-label:switch_language">
+              <img src="img/uk.png" alt="Georgian">
+            </button>
+          </li>
+          <li class="menu-icon">
+            <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+              <img src="img/menu_icon.png" alt="menu icon">
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-headline">
+    <div class="container">
+
+      <!-- Small tagline above headline -->
+      <div class="hero-tagline">
+        <img src="img/rocket-1.png" alt="rocket icon">
+        <span>Crafting digital excellence</span>
+      </div>
+
+      <!-- Main headline -->
+      <h1 class="hero-title">
+        <span data-i18n="projects_hero_title_prefix">We build software that</span>
+        <span class="highlight" data-i18n="projects_hero_title_highlight">drives growth</span>
+      </h1>
+
+      <!-- Subtext / description -->
+      <p class="hero-subtext" data-i18n="projects_hero_subtext">
+        From visionary startups to enterprise leaders, we engineer robust, scalable,
+        and beautiful digital products that define the industries.
+      </p>
+
+      <!-- Call-to-action button -->
+      <button type="button" onclick="location.href='contact.html#send-message'" data-i18n="projects_hero_cta">
+        Start Your Project ->
+      </button>
+
+    </div>
+  </section>
+
+  <section class="featured-projects">
+    <div class="container">
+
+      <h1 data-i18n="projects_featured_title">Featured Works</h1>
+
+      <div class="projects-grid">
+
+        <!-- Project Card 1 -->
+        <div class="project-card" id="healthcare-industry">
+
+          <div class="project-image">
+            <img src="img/projects/healthcare-website.jpg" alt="Project 1 image/screenshot">
+          </div>
+
+          <div class="project-content">
+            <h3 data-i18n="project1_title">Healthcare Industry</h3>
+            <p data-i18n="project1_desc">
+              A secure and scalable healthcare platform designed for clinics and medical centers.
+              The system includes appointment scheduling, patient record management, and
+              real-time communication between doctors and patients, ensuring data privacy
+              and seamless user experience.
+            </p>
+            <div class="used-tech-stack">
+              <span>React</span>
+              <span>Typescript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="contact.html#send-message" class="cta-button" data-i18n="project_cta_view">View Project</a>
+          </div>
+
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card" id="fintech-industry">
+
+          <div class="project-image">
+            <img src="img/projects/fintech-website.jpg" alt="Project 2 image/screenshot">
+          </div>
+
+          <div class="project-content">
+            <h3 data-i18n="project2_title">Fintech Industry</h3>
+            <p data-i18n="project2_desc">
+              A modern fintech web application built for secure digital transactions and
+              financial analytics. The platform provides real-time payment processing,
+              user dashboards, transaction history tracking, and advanced data visualization
+              tools for smarter financial decision-making.
+            </p>
+            <div class="used-tech-stack">
+              <span>React</span>
+              <span>Typescript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="contact.html#send-message" class="cta-button" data-i18n="project_cta_view">View Project</a>
+          </div>
+
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card" id="ecommerce-furniture-shop">
+
+          <div class="project-image">
+            <img src="img/projects/furniture-website.jpg" alt="Project 3 image/screenshot">
+          </div>
+
+          <div class="project-content">
+            <h3 data-i18n="project3_title">E-Commerce Furniture shop</h3>
+            <p data-i18n="project3_desc">
+              A fully responsive e-commerce platform for a furniture retailer, featuring
+              product filtering, secure checkout, inventory management, and an intuitive
+              admin dashboard. Designed to deliver a smooth shopping experience across
+              all devices.
+            </p>
+            <div class="used-tech-stack">
+              <span>React</span>
+              <span>Typescript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="contact.html#send-message" class="cta-button" data-i18n="project_cta_view">View Project</a>
+          </div>
+
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card" id="burger-bar">
+
+          <div class="project-image">
+            <img src="img/projects/burger-bar-website.jpg" alt="Project 4 image/screenshot">
+          </div>
+
+          <div class="project-content">
+            <h3 data-i18n="project4_title">Burger Bar</h3>
+            <p data-i18n="project4_desc">
+              A dynamic website and online ordering system for a local burger restaurant.
+              The platform includes digital menu management, table reservations,
+              order tracking, and an integrated payment system to enhance customer
+              convenience and engagement.
+            </p>
+            <div class="used-tech-stack">
+              <span>React</span>
+              <span>Typescript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="contact.html#send-message" class="cta-button" data-i18n="project_cta_view">View Project</a>
+          </div>
+
+        </div>
+
+        <!-- Project Card 5 -->
+        <div class="project-card" id="crm-system">
+
+          <div class="project-image">
+            <img src="img/projects/crm.jpg" alt="Project 5 image/screenshot">
+          </div>
+
+          <div class="project-content">
+            <h3 data-i18n="project5_title">CRM System</h3>
+            <p data-i18n="project5_desc">
+              A custom-built CRM system designed to streamline customer management,
+              sales tracking, and internal team collaboration. The solution offers
+              role-based access control, reporting tools, and workflow automation
+              to improve operational efficiency.
+            </p>
+            <div class="used-tech-stack">
+              <span>React</span>
+              <span>Typescript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="contact.html#send-message" class="cta-button" data-i18n="project_cta_view">View Project</a>
+          </div>
+
+        </div>
+
+        <!-- Project Card 6 -->
+        <div class="project-card" id="educity-educational-center">
+
+          <div class="project-image">
+            <img src="img/projects/educity-screenshot.png" alt="Project 6 image/screenshot">
+          </div>
+
+          <div class="project-content">
+            <h3 data-i18n="project6_title">Educity - Educational Center</h3>
+            <p data-i18n="project6_desc">
+              A comprehensive educational management platform for training centers and
+              institutions. The system supports course management, student enrollment,
+              attendance tracking, and performance reporting through a user-friendly
+              administrative interface.
+            </p>
+            <div class="used-tech-stack">
+              <span>React</span>
+              <span>Typescript</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="contact.html#send-message" class="cta-button" data-i18n="project_cta_view">View Project</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <ul>
+        <li>
+          <a href="index.html"> <img src="img/header-logo.png" alt="footer company logo">
+          </a>
+        </li>
+        <li class="footer-contact"><img src="img/footer-logos/location.png" alt="Location">Georgia Tbilisi Chavcahvade
+        </li>
+        <li class="footer-contact"><img src="img/footer-logos/phone-call.png" alt="Phone number">+995 500 00 00 07</li>
+        <li class="footer-contact"><img src="img/footer-logos/email.png" alt="Email">info@softon.ge</li>
+        <li>
+          <ul class="social-logos">
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src="img/footer-logos/facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="img/footer-logos/linkedin.png" alt="LinkedIn"></a></li>
+            <li><a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><img src="img/footer-logos/tiktok.png" alt="TikTok"></a></li>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="img/footer-logos/instagram.png" alt="Instagram"></a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul>
+        <li><a href="services.html" class="list-title" data-i18n="footer_services_title">Services</a></li>
+        <li><a href="services.html#web-development" data-i18n="footer_web_dev">Web development</a></li>
+        <li><a href="services.html#mobile-app-development" data-i18n="footer_mobile_dev">Mobile app development</a></li>
+        <li><a href="services.html#digital-product-design" data-i18n="footer_design">Digital product designs</a></li>
+        <li><a href="services.html#mvp-development" data-i18n="footer_mvp">MVP development</a></li>
+        <li><a href="services.html#custom-software-development" data-i18n="footer_custom">Custom Software development</a></li>
+        <li><a href="contact.html#send-message" data-i18n="footer_support">Long-Term Support</a></li>
+      </ul>
+      <ul>
+        <li><a href="projects.html" class="list-title" data-i18n="footer_projects_title">Projects</a></li>
+        <li><a href="projects.html#healthcare-industry" data-i18n="footer_healthcare">Healthcare Industry</a></li>
+        <li><a href="projects.html#fintech-industry" data-i18n="footer_fintech">Fintech Website</a></li>
+        <li><a href="projects.html#ecommerce-furniture-shop" data-i18n="footer_furniture">E-Commerce Furniture shop</a></li>
+        <li><a href="projects.html#burger-bar" data-i18n="footer_burger">Burger Bar Website</a></li>
+        <li><a href="projects.html#crm-system" data-i18n="footer_crm">Gym CRM system</a></li>
+        <li><a href="projects.html#educity-educational-center" data-i18n="footer_educity">Educity - Educational center</a></li>
+      </ul>
+      <ul>
+        <li><a href="about.html" class="list-title" data-i18n="footer_about_title">About us</a></li>
+        <li><a href="about.html#about-company" data-i18n="footer_about_company">About the company</a></li>
+        <li><a href="about.html#company-mission" data-i18n="footer_company_mission">Company Mission</a></li>
+        <li><a href="about.html#our-vision" data-i18n="footer_our_vision">Our Vision</a></li>
+        <li><a href="about.html#team" data-i18n="footer_team">Team</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <section class="copyright">
+    <span data-i18n="copyright">2026 &reg; All Rights Reserved</span>
+  </section>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
+
+

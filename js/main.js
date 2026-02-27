@@ -1,0 +1,356 @@
+(() => {
+  const MOBILE_BREAKPOINT = 960;
+  const LANGUAGE_STORAGE_KEY = "softon_language";
+  const header = document.querySelector("header");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const langToggle = document.querySelector(".lang-toggle");
+
+  const translations = {
+    en: {
+      switch_language: "Switch language",
+      nav_services: "Services",
+      nav_projects: "Projects",
+      nav_about: "About",
+      nav_contact: "Contact Us",
+      footer_services_title: "Services",
+      footer_projects_title: "Projects",
+      footer_about_title: "About us",
+      footer_web_dev: "Web development",
+      footer_mobile_dev: "Mobile app development",
+      footer_design: "Digital product designs",
+      footer_mvp: "MVP development",
+      footer_custom: "Custom Software development",
+      footer_support: "Long-Term Support",
+      footer_healthcare: "Healthcare Industry",
+      footer_fintech: "Fintech Website",
+      footer_furniture: "E-Commerce Furniture shop",
+      footer_burger: "Burger Bar Website",
+      footer_crm: "Gym CRM system",
+      footer_educity: "Educity - Educational center",
+      footer_about_company: "About the company",
+      footer_company_mission: "Company Mission",
+      footer_our_vision: "Our Vision",
+      footer_team: "Team",
+      copyright: "2026 (©) All Rights Reserved",
+      home_hero_title: "Turning idea into living software",
+      home_hero_subtitle:
+        "From concept to launch, we craft software that evolves and delivers real value",
+      home_hero_cta: "Request a consultation",
+      home_offer_title: "What We Offer",
+      home_offer_subtitle:
+        "We help businesses turn ideas into reliable, scalable, and user-friendly digital products.",
+      offer_web_title: "Web Development",
+      offer_web_desc:
+        "Fast, responsive, and modern websites built for performance, accessibility, and scalability.",
+      offer_mobile_title: "Mobile App Development",
+      offer_mobile_desc:
+        "Intuitive mobile apps for iOS and Android with smooth performance and user-focused design.",
+      offer_design_title: "Digital Product Designs",
+      offer_design_desc:
+        "Clean, intuitive interfaces designed to improve usability, engagement, and user satisfaction.",
+      offer_mvp_title: "MVP Development",
+      offer_mvp_desc:
+        "Rapid MVP development to validate ideas, gather feedback, and launch faster.",
+      offer_custom_title: "Custom Software Development",
+      offer_custom_desc:
+        "Custom software solutions aligned with your business goals, workflows, and growth plans.",
+      offer_support_title: "Long-Term Support",
+      offer_support_desc:
+        "Reliable maintenance, monitoring, and continuous improvements to keep your product running smoothly.",
+      stats_successful_projects: "Successful Projects",
+      stats_satisfied_clients: "Satisfied Clients",
+      stats_team_members: "Team Members",
+      stats_partners: "Partners",
+      services_how_title: "How We Work",
+      services_how_subtitle: "From Idea to Launch, Step by Step",
+      services_how_desc:
+        "We turn your vision into reality through a proven development process. Each phase builds on the last to deliver software that truly fits your needs.",
+      services_faq_title: "Frequently Asked Questions",
+      projects_hero_title_prefix: "We build software that",
+      projects_hero_title_highlight: "drives growth",
+      projects_hero_subtext:
+        "From visionary startups to enterprise leaders, we engineer robust, scalable, and beautiful digital products that define the industries.",
+      projects_hero_cta: "Start Your Project ->",
+      projects_featured_title: "Featured Works",
+      project1_title: "Healthcare Industry",
+      project1_desc:
+        "A secure and scalable healthcare platform designed for clinics and medical centers. The system includes appointment scheduling, patient record management, and real-time communication between doctors and patients, ensuring data privacy and seamless user experience.",
+      project2_title: "Fintech Industry",
+      project2_desc:
+        "A modern fintech web application built for secure digital transactions and financial analytics. The platform provides real-time payment processing, user dashboards, transaction history tracking, and advanced data visualization tools for smarter financial decision-making.",
+      project3_title: "E-Commerce Furniture shop",
+      project3_desc:
+        "A fully responsive e-commerce platform for a furniture retailer, featuring product filtering, secure checkout, inventory management, and an intuitive admin dashboard. Designed to deliver a smooth shopping experience across all devices.",
+      project4_title: "Burger Bar",
+      project4_desc:
+        "A dynamic website and online ordering system for a local burger restaurant. The platform includes digital menu management, table reservations, order tracking, and an integrated payment system to enhance customer convenience and engagement.",
+      project5_title: "CRM System",
+      project5_desc:
+        "A custom-built CRM system designed to streamline customer management, sales tracking, and internal team collaboration. The solution offers role-based access control, reporting tools, and workflow automation to improve operational efficiency.",
+      project6_title: "Educity - Educational Center",
+      project6_desc:
+        "A comprehensive educational management platform for training centers and institutions. The system supports course management, student enrollment, attendance tracking, and performance reporting through a user-friendly administrative interface.",
+      project_cta_view: "View Project",
+      about_title: "About Softon",
+      about_intro_p1:
+        "Softon is a full-cycle software development company helping startups and enterprises turn ideas into powerful digital products.",
+      about_intro_p2:
+        "Our team combines engineering excellence, product thinking and modern technologies to build scalable, secure and high-performance systems.",
+      about_intro_p3:
+        "We focus on long-term partnerships, clean architecture and delivering solutions that grow with your business.",
+      about_mission_title: "Our Mission",
+      about_mission_desc:
+        "To deliver reliable and innovative software solutions that empower businesses to grow faster and operate smarter.",
+      about_vision_title: "Our Vision",
+      about_vision_desc:
+        "To become a trusted global technology partner known for its engineering excellence, transparency and long-term support.",
+      about_values_title: "Our Core Values",
+      about_value1_title: "Quality First",
+      about_value1_desc:
+        "We never compromise on clean code, scalable architecture and best practices.",
+      about_value2_title: "Transparency",
+      about_value2_desc:
+        "Clear communication and honest reporting throughout every project.",
+      about_value3_title: "Innovation",
+      about_value3_desc:
+        "Modern technologies and forward-thinking engineering solutions.",
+      about_value4_title: "Client Partnership",
+      about_value4_desc:
+        "We build long-term relationships and treat every project as our own.",
+      about_team_title: "Meet Our Team",
+      team_member1_name: "Davit Dgebuadze",
+      team_member1_role: "Founder & Chief Executive Officer",
+      team_member2_name: "Ani Chichua",
+      team_member2_role: "Product & Operations Lead",
+      contact_title: "Contact Us",
+      contact_subtitle:
+        "Tell us about your idea, project, or challenge - our team will get back to you shortly.",
+      contact_location_label: "Location:",
+      contact_phone_label: "Phone:",
+      contact_email_label: "Email:",
+      contact_hours_label: "Working hours:",
+      contact_hours_value: "Mon - Fri, 10:00 - 18:00",
+      contact_form_title: "Send us a message",
+      contact_placeholder_name: "*Name",
+      contact_placeholder_phone: "*Phone number",
+      contact_placeholder_email: "*you@example.com",
+      contact_placeholder_company: "Company (Optional)",
+      contact_placeholder_message: "Your message (Optional)",
+      contact_send_btn: "Send message",
+      contact_why_title: "Why Work With Softon?",
+      contact_why_fast: "Quick response times",
+      contact_why_clear: "Transparent communication",
+      contact_why_experienced: "Experienced engineering team",
+      contact_why_support: "Long-term product support",
+      our_partner:"Our Partners"
+    },
+    ka: {
+      switch_language: "ენის შეცვლა",
+      nav_services: "სერვისები",
+      nav_projects: "პროექტები",
+      nav_about: "ჩვენ შესახებ",
+      nav_contact: "დაგვიკავშირდით",
+      footer_services_title: "სერვისები",
+      footer_projects_title: "პროექტები",
+      footer_about_title: "ჩვენ შესახებ",
+      footer_web_dev: "ვებ დეველოპმენტი",
+      footer_mobile_dev: "მობაილ აპების განვითარება",
+      footer_design: "ციფრული პროდუქტის დიზაინი",
+      footer_mvp: "MVP განვითარება",
+      footer_custom: "ინდივიდუალური პროგრამული უზრუნველყოფა",
+      footer_support: "გრძელვადიანი მხარდაჭერა",
+      footer_healthcare: "ჯანდაცვის ინდუსტრია",
+      footer_fintech: "ფინტექ ვებსაიტი",
+      footer_furniture: "ავეჯის E-Commerce მაღაზია",
+      footer_burger: "ბურგერ ბარის ვებსაიტი",
+      footer_crm: "სპორტდარბაზის CRM სისტემა",
+      footer_educity: "Educity - საგანმანათლებლო ცენტრი",
+      footer_about_company: "კომპანიის შესახებ",
+      footer_company_mission: "კომპანიის მისია",
+      footer_our_vision: "ჩვენი ხედვა",
+      footer_team: "გუნდი",
+      copyright: "2026 (©) ყველა უფლება დაცულია",
+      home_hero_title: "იდეას ვაქცევთ ცოცხალ პროგრამულ პროდუქტად",
+      home_hero_subtitle:
+        "კონცეფციიდან გაშვებამდე ვქმნით პროგრამულ პროდუქტს, რომელიც ვითარდება და რეალურ ღირებულებას ქმნის",
+      home_hero_cta: "კონსულტაციის მოთხოვნა",
+      home_offer_title: "რას გთავაზობთ",
+      home_offer_subtitle:
+        "ვეხმარებით ბიზნესებს იდეების საიმედო, მასშტაბირებად და მომხმარებელზე მორგებულ ციფრულ პროდუქტებად ქცევაში.",
+      offer_web_title: "ვებ დეველოპმენტი",
+      offer_web_desc:
+        "სწრაფი, რესპონსიული და თანამედროვე ვებსაიტები, შექმნილი წარმადობის, ხელმისაწვდომობისა და მასშტაბირებისთვის.",
+      offer_mobile_title: "მობაილ აპების განვითარება",
+      offer_mobile_desc:
+        "ინტუიციური iOS და Android აპები სტაბილური მუშაობით და მომხმარებელზე ორიენტირებული დიზაინით.",
+      offer_design_title: "ციფრული პროდუქტის დიზაინი",
+      offer_design_desc:
+        "სუფთა და ინტუიციური ინტერფეისები, რომლებიც აუმჯობესებს გამოყენებადობას, ჩართულობას და კმაყოფილებას.",
+      offer_mvp_title: "MVP განვითარება",
+      offer_mvp_desc:
+        "სწრაფი MVP განვითარება იდეის ვალიდაციისთვის, უკუკავშირის მისაღებად და სწრაფი გაშვებისთვის.",
+      offer_custom_title: "ინდივიდუალური პროგრამული უზრუნველყოფა",
+      offer_custom_desc:
+        "ინდივიდუალური პროგრამული გადაწყვეტები, თქვენი ბიზნეს მიზნებსა და პროცესებზე მორგებული.",
+      offer_support_title: "გრძელვადიანი მხარდაჭერა",
+      offer_support_desc:
+        "სანდო მოვლა, მონიტორინგი და უწყვეტი გაუმჯობესება, რომ თქვენი პროდუქტი გამართულად მუშაობდეს.",
+      stats_successful_projects: "წარმატებული პროექტები",
+      stats_satisfied_clients: "კმაყოფილი კლიენტები",
+      stats_team_members: "გუნდის წევრები",
+      stats_partners: "პარტნიორები",
+      services_how_title: "როგორ ვმუშაობთ",
+      services_how_subtitle: "იდეიდან გაშვებამდე, ეტაპობრივად",
+      services_how_desc:
+        "თქვენს ხედვას ვაქცევთ რეალობად დადასტურებული განვითარების პროცესით. თითოეული ეტაპი ეფუძნება წინა ეტაპს, რათა მივიღოთ თქვენი საჭიროებებისთვის ზუსტად მორგებული პროგრამა.",
+      services_faq_title: "ხშირად დასმული კითხვები",
+      projects_hero_title_prefix: "ვქმნით პროგრამულ პროდუქტს, რომელიც",
+      projects_hero_title_highlight: "ზრდას აჩქარებს",
+      projects_hero_subtext:
+        "ვიზიონერი სტარტაპებიდან მსხვილ კომპანიებამდე, ვქმნით მტკიცე, მასშტაბირებად და გამორჩეულ ციფრულ პროდუქტებს.",
+      projects_hero_cta: "დაიწყეთ თქვენი პროექტი ->",
+      projects_featured_title: "რჩეული ნამუშევრები",
+      project1_title: "ჯანდაცვის ინდუსტრია",
+      project1_desc:
+        "უსაფრთხო და მასშტაბირებადი ჯანდაცვის პლატფორმა კლინიკებისა და სამედიცინო ცენტრებისთვის. სისტემა მოიცავს ვიზიტების დაგეგმვას, პაციენტების ჩანაწერების მართვას და ექიმებსა და პაციენტებს შორის რეალურ დროში კომუნიკაციას, მონაცემთა დაცვით და გამართული მომხმარებლის გამოცდილებით.",
+      project2_title: "ფინტექ ინდუსტრია",
+      project2_desc:
+        "თანამედროვე ფინტექ ვებ აპლიკაცია, შექმნილი უსაფრთხო ციფრული ტრანზაქციებისა და ფინანსური ანალიტიკისთვის. პლატფორმა უზრუნველყოფს რეალურ დროში გადახდების დამუშავებას, მომხმარებლის პანელებს, ტრანზაქციების ისტორიის მონიტორინგს და მოწინავე მონაცემთა ვიზუალიზაციას უკეთესი ფინანსური გადაწყვეტილებებისთვის.",
+      project3_title: "E-Commerce ავეჯის მაღაზია",
+      project3_desc:
+        "სრულად რესპონსიული e-commerce პლატფორმა ავეჯის რითეილერისთვის, პროდუქტის ფილტრაციით, უსაფრთხო გადახდით, მარაგების მართვით და ინტუიციური ადმინ პანელით. შექმნილია ყველა მოწყობილობაზე გლუვი შოპინგ გამოცდილების მისაღებად.",
+      project4_title: "ბურგერ ბარი",
+      project4_desc:
+        "დინამიკური ვებსაიტი და ონლაინ შეკვეთის სისტემა ადგილობრივი ბურგერ რესტორნისთვის. პლატფორმა მოიცავს ციფრული მენიუს მართვას, მაგიდების დაჯავშნას, შეკვეთების ტრეკინგს და ინტეგრირებულ გადახდის სისტემას მომხმარებლის კომფორტისა და ჩართულობის გასაზრდელად.",
+      project5_title: "CRM სისტემა",
+      project5_desc:
+        "ინდივიდუალურად შექმნილი CRM სისტემა, რომელიც ამარტივებს კლიენტების მართვას, გაყიდვების ტრეკინგს და შიდა გუნდურ თანამშრომლობას. გადაწყვეტა მოიცავს როლებზე დაფუძნებულ წვდომას, რეპორტინგის ინსტრუმენტებს და სამუშაო პროცესების ავტომატიზაციას ოპერაციული ეფექტიანობის გასაუმჯობესებლად.",
+      project6_title: "Educity - საგანმანათლებლო ცენტრი",
+      project6_desc:
+        "სრულყოფილი საგანმანათლებლო მართვის პლატფორმა სასწავლო ცენტრებისთვის და დაწესებულებებისთვის. სისტემა უზრუნველყოფს კურსების მართვას, სტუდენტების რეგისტრაციას, დასწრების ტრეკინგს და პროგრესის რეპორტინგს მომხმარებელზე მორგებული ადმინისტრაციული ინტერფეისით.",
+      project_cta_view: "პროექტის ნახვა",
+      about_title: "Softon-ის შესახებ",
+      about_intro_p1:
+        "Softon არის სრული ციკლის პროგრამული განვითარების კომპანია, რომელიც სტარტაპებსა და ბიზნესებს ეხმარება იდეების ძლიერ ციფრულ პროდუქტებად გარდაქმნაში.",
+      about_intro_p2:
+        "ჩვენი გუნდი აერთიანებს საინჟინრო სრულყოფილებას, პროდუქტის ხედვას და თანამედროვე ტექნოლოგიებს, რათა შექმნას მასშტაბირებადი, უსაფრთხო და მაღალი წარმადობის სისტემები.",
+      about_intro_p3:
+        "ჩვენი ფოკუსია გრძელვადიანი პარტნიორობა, სუფთა არქიტექტურა და ისეთი გადაწყვეტილებები, რომლებიც თქვენს ბიზნესთან ერთად იზრდება.",
+      about_mission_title: "ჩვენი მისია",
+      about_mission_desc:
+        "ვქმნათ სანდო და ინოვაციური პროგრამული გადაწყვეტილებები, რომლებიც ბიზნესებს ეხმარება უფრო სწრაფად გაიზარდონ და უფრო ეფექტურად იმუშაონ.",
+      about_vision_title: "ჩვენი ხედვა",
+      about_vision_desc:
+        "გავხდეთ სანდო გლობალური ტექნოლოგიური პარტნიორი, რომელიც ცნობილია საინჟინრო სრულყოფილებით, გამჭვირვალობით და გრძელვადიანი მხარდაჭერით.",
+      about_values_title: "ჩვენი ძირითადი ღირებულებები",
+      about_value1_title: "ხარისხი უპირველესად",
+      about_value1_desc:
+        "ჩვენ არასდროს ვთმობთ სუფთა კოდის, მასშტაბირებადი არქიტექტურისა და საუკეთესო პრაქტიკების სტანდარტს.",
+      about_value2_title: "გამჭვირვალობა",
+      about_value2_desc:
+        "მკაფიო კომუნიკაცია და გულწრფელი რეპორტინგი თითოეულ პროექტში.",
+      about_value3_title: "ინოვაცია",
+      about_value3_desc:
+        "თანამედროვე ტექნოლოგიები და წინმსწრები საინჟინრო გადაწყვეტილებები.",
+      about_value4_title: "კლიენტთან პარტნიორობა",
+      about_value4_desc:
+        "ვქმნით გრძელვადიან ურთიერთობებს და თითოეულ პროექტს საკუთარად ვუდგებით.",
+      about_team_title: "გაიცანით ჩვენი გუნდი",
+      team_member1_name: "დავით დგებუაძე",
+      team_member1_role: "დამფუძნებელი და გენერალური დირექტორი",
+      team_member2_name: "ანი ჩიჩუა",
+      team_member2_role: "პროდუქტისა და ოპერაციების ხელმძღვანელი",
+      contact_title: "დაგვიკავშირდით",
+      contact_subtitle:
+        "მოგვწერეთ თქვენი იდეის, პროექტის ან გამოწვევის შესახებ - ჩვენი გუნდი მალე დაგიბრუნდებათ.",
+      contact_location_label: "მისამართი:",
+      contact_phone_label: "ტელეფონი:",
+      contact_email_label: "ელ. ფოსტა:",
+      contact_hours_label: "სამუშაო საათები:",
+      contact_hours_value: "ორშ - პარ, 10:00 - 18:00",
+      contact_form_title: "მოგვწერეთ შეტყობინება",
+      contact_placeholder_name: "*სახელი",
+      contact_placeholder_phone: "*ტელეფონის ნომერი",
+      contact_placeholder_email: "*you@example.com",
+      contact_placeholder_company: "კომპანია (არასავალდებულო)",
+      contact_placeholder_message: "თქვენი შეტყობინება (არასავალდებულო)",
+      contact_send_btn: "გაგზავნა",
+      contact_why_title: "რატომ უნდა ითანამშრომლოთ Softon-თან?",
+      contact_why_fast: "სწრაფი გამოხმაურება",
+      contact_why_clear: "გამჭვირვალე კომუნიკაცია",
+      contact_why_experienced: "გამოცდილი საინჟინრო გუნდი",
+      contact_why_support: "პროდუქტის გრძელვადიანი მხარდაჭერა",
+      our_partner:"ჩვენი პარტნიორები"
+    }
+  };
+
+  const flags = {
+    en: { src: "img/uk.png", alt: "English" },
+    ka: { src: "img/geo.png", alt: "ქართული" }
+  };
+
+  const closeMenu = () => {
+    if (!header || !menuToggle) return;
+    header.classList.remove("nav-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  };
+
+  const applyLanguage = (language) => {
+    const selectedLanguage = translations[language] ? language : "en";
+    const nextLanguage = selectedLanguage === "en" ? "ka" : "en";
+
+    document.documentElement.lang = selectedLanguage;
+
+    document.querySelectorAll("[data-i18n]").forEach((element) => {
+      const key = element.getAttribute("data-i18n");
+      const translatedValue = translations[selectedLanguage][key];
+      if (translatedValue) element.textContent = translatedValue;
+    });
+
+    document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
+      const entries = element.getAttribute("data-i18n-attr").split("|");
+      entries.forEach((entry) => {
+        const [attribute, key] = entry.split(":");
+        const translatedValue = translations[selectedLanguage][key];
+        if (attribute && translatedValue) element.setAttribute(attribute, translatedValue);
+      });
+    });
+
+    if (langToggle) {
+      const flagImg = langToggle.querySelector("img");
+      if (flagImg && flags[nextLanguage]) {
+        flagImg.src = flags[nextLanguage].src;
+        flagImg.alt = flags[nextLanguage].alt;
+      }
+    }
+
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
+  };
+
+  if (menuToggle && header) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = header.classList.toggle("nav-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.querySelectorAll("header nav a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= MOBILE_BREAKPOINT) closeMenu();
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > MOBILE_BREAKPOINT) closeMenu();
+    });
+  }
+
+  let currentLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || "en";
+  applyLanguage(currentLanguage);
+
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      currentLanguage = currentLanguage === "en" ? "ka" : "en";
+      applyLanguage(currentLanguage);
+    });
+  }
+})();
