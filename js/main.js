@@ -284,6 +284,87 @@
     }
   };
 
+  const enServiceTranslations = {
+    services_card_web_title: "Web development",
+    services_card_web_desc:
+      "We build custom websites that are tailored to your business needs. We use the latest technologies and best practices to ensure that your website is fast, secure, and easy to use.",
+    services_card_mobile_title: "Mobile App development",
+    services_card_mobile_desc:
+      "We build custom mobile apps that are tailored to your business needs. We use the latest technologies and best practices to ensure that your app is fast, secure, and easy to use.",
+    services_card_design_title: "Digital product designs",
+    services_card_design_desc:
+      "We build custom mobile apps that are tailored to your business needs. We use the latest technologies and best practices to ensure that your app is fast, secure, and easy to use.",
+    services_card_mvp_title: "MVP development",
+    services_card_mvp_desc:
+      "We build custom mobile apps that are tailored to your business needs. We use the latest technologies and best practices to ensure that your app is fast, secure, and easy to use.",
+    services_card_custom_title: "Custom Software development",
+    services_card_custom_desc:
+      "We build custom mobile apps that are tailored to your business needs. We use the latest technologies and best practices to ensure that your app is fast, secure, and easy to use.",
+    services_read_more: "Read more",
+    services_step_badge_core: "Core",
+    services_step1_title: "Discovery",
+    services_step1_desc: "We learn your goals, users, and constraints to define the project scope",
+    services_step2_title: "Design",
+    services_step2_desc: "Create wireframes, prototypes, and visual designs for your approval",
+    services_step3_title: "Develop",
+    services_step3_desc: "Build your product with clean code, regular updates, and testing",
+    services_step4_title: "Deploy",
+    services_step4_desc: "Launch your software to production with monitoring and support",
+    services_step5_title: "Evolve",
+    services_step5_desc: "Iterate based on feedback and scale as your business grows",
+    services_faq_q1: "What services do you offer?",
+    services_faq_a1:
+      "We design and build web apps, mobile apps, MVPs, and custom software, handling discovery, UX/UI, development, and launch.",
+    services_faq_q2: "How long does a typical project take?",
+    services_faq_a2:
+      "Timelines vary by scope, but most MVPs take 6-10 weeks, while larger platforms take 3-5 months.",
+    services_faq_q3: "Can you work with an existing product?",
+    services_faq_a3:
+      "Yes. We can audit, improve, and extend current systems, or rebuild parts that need better performance or scale."
+  };
+
+  const kaServiceTranslations = {
+    services_card_web_title: "ვებ დეველოპმენტი",
+    services_card_web_desc:
+      "ჩვენ ვქმნით ინდივიდუალურ ვებსაიტებს, რომლებიც თქვენს ბიზნეს საჭიროებებზეა მორგებული. ვიყენებთ თანამედროვე ტექნოლოგიებსა და საუკეთესო პრაქტიკებს, რათა თქვენი ვებსაიტი იყოს სწრაფი, უსაფრთხო და მარტივად გამოსაყენებელი.",
+    services_card_mobile_title: "მობაილ აპების განვითარება",
+    services_card_mobile_desc:
+      "ჩვენ ვქმნით ინდივიდუალურ მობაილ აპებს თქვენი ბიზნეს საჭიროებებისთვის. თანამედროვე ტექნოლოგიებითა და საუკეთესო პრაქტიკებით უზრუნველვყოფთ სწრაფ, უსაფრთხო და მოსახერხებელ აპლიკაციებს.",
+    services_card_design_title: "ციფრული პროდუქტის დიზაინი",
+    services_card_design_desc:
+      "ჩვენ ვქმნით ციფრული პროდუქტების დიზაინს თქვენი ბიზნეს მიზნებზე მორგებით, რათა მიიღოთ თანამედროვე, პრაქტიკული და მომხმარებელზე ორიენტირებული გამოცდილება.",
+    services_card_mvp_title: "MVP განვითარება",
+    services_card_mvp_desc:
+      "ჩვენ სწრაფად ვქმნით MVP-ს თქვენი იდეის ვალიდაციისთვის, უკუკავშირის მისაღებად და პროდუქტის დროულად გასაშვებად.",
+    services_card_custom_title: "ინდივიდუალური პროგრამული უზრუნველყოფა",
+    services_card_custom_desc:
+      "ჩვენ ვქმნით ინდივიდუალურ პროგრამულ გადაწყვეტილებებს თქვენი ბიზნეს პროცესებისა და მიზნების შესაბამისად.",
+    services_read_more: "ვრცლად",
+    services_step_badge_core: "ძირითადი",
+    services_step1_title: "აღმოჩენა",
+    services_step1_desc: "ვიკვლევთ თქვენს მიზნებს, მომხმარებლებს და შეზღუდვებს, რათა ზუსტად განვსაზღვროთ პროექტის ფარგლები",
+    services_step2_title: "დიზაინი",
+    services_step2_desc: "ვქმნით ვაიერფრეიმებს, პროტოტიპებს და ვიზუალურ დიზაინს თქვენი დამტკიცებისთვის",
+    services_step3_title: "განვითარება",
+    services_step3_desc: "ვქმნით თქვენს პროდუქტს სუფთა კოდით, რეგულარული განახლებებით და ტესტირებით",
+    services_step4_title: "გაშვება",
+    services_step4_desc: "ვუშვებთ პროდუქტს პროდაქშენში მონიტორინგითა და მხარდაჭერით",
+    services_step5_title: "განვითარების გაგრძელება",
+    services_step5_desc: "ვაუმჯობესებთ პროდუქტს უკუკავშირის მიხედვით და ვზრდით თქვენს ბიზნესთან ერთად",
+    services_faq_q1: "რა სერვისებს სთავაზობთ?",
+    services_faq_a1:
+      "ვქმნით ვებ აპებს, მობაილ აპებს, MVP-ებს და ინდივიდუალურ პროგრამულ გადაწყვეტებს - აღმოჩენიდან UX/UI-მდე, განვითარებიდან გაშვებამდე.",
+    services_faq_q2: "რამდენი დრო სჭირდება პროექტს?",
+    services_faq_a2:
+      "დრო დამოკიდებულია მოცულობაზე, თუმცა საშუალოდ MVP მოითხოვს 6-10 კვირას, ხოლო დიდი პლატფორმები 3-5 თვეს.",
+    services_faq_q3: "არსებულ პროდუქტზე მუშაობთ?",
+    services_faq_a3:
+      "დიახ. შეგვიძლია არსებული სისტემის აუდიტი, გაუმჯობესება და გაფართოება, ან იმ ნაწილების ხელახლა შექმნა, რომელთაც უკეთესი წარმადობა და მასშტაბირება სჭირდება."
+  };
+
+  Object.assign(translations.en, enServiceTranslations);
+  Object.assign(translations.ka, kaServiceTranslations);
+
   const flags = {
     en: { src: "img/uk.png", alt: "English" },
     ka: { src: "img/geo.png", alt: "ქართული" }
