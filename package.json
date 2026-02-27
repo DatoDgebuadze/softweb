@@ -1,0 +1,11 @@
+{
+  "name": "develon-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Static website checks for i18n and relative paths",
+  "scripts": {
+    "lint:i18n": "node scripts/validate-i18n.js",
+    "lint:paths": "node scripts/check-relative-paths.js",
+    "check": "npm run lint:i18n && npm run lint:paths"
+  }
+}

@@ -370,68 +370,26 @@
     ka: { src: "img/geo.png", alt: "ქართული" }
   };
 
-  const closeMenu = () => {
-    if (!header || !menuToggle) return;
-    header.classList.remove("nav-open");
-    menuToggle.setAttribute("aria-expanded", "false");
-  };
+  const menu = window.SoftonMenu?.init({
+    header,
+    menuToggle,
+    mobileBreakpoint: MOBILE_BREAKPOINT
+  });
 
-  const applyLanguage = (language) => {
-    const selectedLanguage = translations[language] ? language : "en";
-    const nextLanguage = selectedLanguage === "en" ? "ka" : "en";
+  const i18n = window.SoftonI18n?.create({
+    translations,
+    flags,
+    langToggle,
+    storageKey: LANGUAGE_STORAGE_KEY,
+    defaultLanguage: "en"
+  });
 
-    document.documentElement.lang = selectedLanguage;
+  if (i18n) i18n.init();
 
-    document.querySelectorAll("[data-i18n]").forEach((element) => {
-      const key = element.getAttribute("data-i18n");
-      const translatedValue = translations[selectedLanguage][key];
-      if (translatedValue) element.textContent = translatedValue;
-    });
-
-    document.querySelectorAll("[data-i18n-attr]").forEach((element) => {
-      const entries = element.getAttribute("data-i18n-attr").split("|");
-      entries.forEach((entry) => {
-        const [attribute, key] = entry.split(":");
-        const translatedValue = translations[selectedLanguage][key];
-        if (attribute && translatedValue) element.setAttribute(attribute, translatedValue);
-      });
-    });
-
-    if (langToggle) {
-      const flagImg = langToggle.querySelector("img");
-      if (flagImg && flags[nextLanguage]) {
-        flagImg.src = flags[nextLanguage].src;
-        flagImg.alt = flags[nextLanguage].alt;
-      }
-    }
-
-    localStorage.setItem(LANGUAGE_STORAGE_KEY, selectedLanguage);
-  };
-
-  if (menuToggle && header) {
-    menuToggle.addEventListener("click", () => {
-      const isOpen = header.classList.toggle("nav-open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    document.querySelectorAll("header nav a").forEach((link) => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth <= MOBILE_BREAKPOINT) closeMenu();
-      });
-    });
-
-    window.addEventListener("resize", () => {
-      if (window.innerWidth > MOBILE_BREAKPOINT) closeMenu();
-    });
-  }
-
-  let currentLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || "en";
-  applyLanguage(currentLanguage);
-
-  if (langToggle) {
+  if (langToggle && i18n) {
     langToggle.addEventListener("click", () => {
-      currentLanguage = currentLanguage === "en" ? "ka" : "en";
-      applyLanguage(currentLanguage);
+      i18n.toggleLanguage();
+      if (window.innerWidth <= MOBILE_BREAKPOINT) menu?.close();
     });
   }
 })();
