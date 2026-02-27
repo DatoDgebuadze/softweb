@@ -1,0 +1,199 @@
+﻿/* =========================
+   CONTACT US PAGE
+========================= */
+/* contact headline */
+section.contact-headline {
+  padding: 40px 0 20px 0;
+  background: #f8f9fb;
+  text-align: center;
+}
+
+section.contact-headline h1 {
+  font-size: 42px;
+  /* font-size:  clamp(1.8rem, 10vw, 2.6rem); */
+  margin-bottom: 14px;
+  color: #111;
+}
+
+section.contact-headline p {
+  /* max-width: 700px; */
+  margin: 0 auto;
+  font-size: 22px;
+  color: #555;
+}
+
+/* contact infos */
+section.contact-info {
+  padding: 20px 0;
+}
+
+section.contact-info ul {
+  padding: 0;
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+section.contact-info li {
+  background-color: #ffffff;
+  list-style: none;
+  padding: 25px;
+  min-width: 160px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section.contact-info img {
+  width: 36px;
+  height: 36px;
+  margin-bottom: 15px;
+}
+
+section.contact-info h3 {
+  color: #2E4E3B;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+section.contact-info p {
+  color: #333;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Send message section */
+section.send-message-section {
+  padding: 20px 0;
+}
+
+section.send-message-section .container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+section.send-message-section .benefits-box {
+  width: 100%;
+  padding: 20px 0;
+}
+
+section.send-message-section .benefits-box p {
+  font-size: 26px;
+  font-weight: 600;
+  color: #2E4E3B;
+  margin-bottom: 25px;
+}
+
+section.send-message-section .benefits-box li {
+  list-style: none;
+  line-height: 36px;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 12px;
+  position: relative;
+  padding-left: 28px;
+}
+
+section.send-message-section .benefits-box li::before {
+  content: "\2714";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2E4E3B;
+  font-weight: 700;
+}
+
+section.send-message-section .benefits-box li:hover {
+  transform: translateX(4px);
+  transition: transform 0.2s ease;
+}
+
+section.send-message-section .contact-form {
+  width: 100%;
+  padding: 48px;
+  background-color: rgba(46, 78, 59, 0.06);
+  border-radius: 24px;
+}
+
+section.send-message-section h2 {
+  font-size: 26px;
+  color: #2E4E3B;
+  margin-bottom: 24px;
+}
+
+section.send-message-section .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  row-gap: 16px;
+}
+
+section.send-message-section .contact-grid .form-group:nth-child(5) {
+  grid-column: 1 / -1;
+}
+
+section.send-message-section input,
+section.send-message-section textarea {
+  width: 100%;
+  padding: 14px 2px;
+  border: 1px solid #CFE3D8;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+section.send-message-section textarea {
+  resize: none;
+  min-height: 120px;
+  max-height: 120px;
+}
+
+section.send-message-section input:focus,
+section.send-message-section textarea:focus {
+  outline: none;
+  border-color: #1fa8bd;
+  box-shadow: 0 0 0 2px rgba(31, 189, 110, 0.15);
+}
+
+.contact-form .btn-primary {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 26px;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #2b1d75;
+  border: 1px solid #2b1d75;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #1fa8bd;
+  border: 1px solid #1fa8bd;
+  transform: translateY(-4px);
+}
+
+/* Map */
+section.map {
+  height: 350px;
+  margin: 0;
+  padding: 80px;
+}
+
+section.map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+

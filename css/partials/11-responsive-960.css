@@ -1,0 +1,474 @@
+﻿/*##############################*/
+/* Styles for Tablet */
+/*##############################*/
+@media screen and (max-width: 960px) {
+.container{
+  width: 92%;
+  max-width: 92%;
+}
+
+/* header */
+header nav ul li{
+  display: none;
+}
+
+header nav ul li.menu-icon {
+  display: inline-block;
+}
+
+header.nav-open nav ul {
+  position: absolute;
+  top: 80px;
+  right: 4%;
+  width: min(280px, 92%);
+  background-color: #ffffff;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  z-index: 1100;
+}
+
+header.nav-open nav ul li {
+  display: block;
+}
+
+header.nav-open nav ul li.menu-icon {
+  display: inline-block;
+  position: fixed;
+  top: 28px;
+  right: 4%;
+  margin: 0;
+  z-index: 1101;
+}
+
+header.nav-open nav ul li.menu-icon button {
+  background: transparent;
+  border: none;
+  padding: 0;
+}
+
+header.nav-open nav ul li a {
+  display: block;
+}
+
+header.nav-open nav ul li a.contact {
+  text-align: center;
+}
+
+/* footer */
+ footer .container {
+  width: 92%;
+  max-width: 92%;
+}
+
+
+/* =========================
+   MAIN/LANDING PAGE
+========================= */
+/* hero section */
+section.hero-section .hero-content h1,
+section.hero-section .hero-content p {
+  max-width: 340px;
+  margin-bottom: 16px;
+}
+
+section.hero-section .hero-content h1 {
+  font-size: 40px;
+  line-height: 46px;
+}
+
+section.hero-section .hero-content p {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+section.hero-section button {
+  width: 160px;
+  height: 36px;
+  font-size: 12px;
+}
+
+/* stats section */
+section.stats-section .container {
+  padding: 16px 0;
+}
+
+section.stats-section li.stat-divider {
+  height: 60px;
+}
+
+section.stats-section span.stat-number {
+  font-size: 36px;
+  line-height: 38px;
+}
+
+section.stats-section span.stat-label {
+  font-size: 14px;
+}
+
+/* offer section */
+section.offer-section {
+  padding: 36px 0px 40px 0px;
+}
+
+section.offer-section .offer-header {
+  max-width: 600px;
+  margin: 0 auto 34px;
+}
+
+section.offer-section .offer-header h2 {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+section.offer-section .offer-header p {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+section.offer-section .offer-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section.offer-section .offer-card {
+  padding: 38px;
+}
+
+section.offer-section .offer-card img {
+  width: 76px;
+  height: 76px;
+  margin-bottom: 14px;
+}
+
+section.offer-section .offer-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+section.offer-section .offer-card p {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+/* why softon section */
+
+/* partners section */
+section.partners-section {
+  padding-bottom: 32px;
+}
+
+section.partners-section h1 {
+  font-size: 30px;
+  margin-bottom: 14px;
+}
+
+.partner-item img {
+  height: 44px;
+}
+
+
+/* =========================
+   SERVICES PAGE
+========================= */
+
+
+/* =========================
+   PROJECTS PAGE
+========================= */
+/* hero headline cta button */
+section.hero-headline {
+  padding: 60px 20px;
+}
+
+section.hero-headline div.hero-tagline {
+  margin-bottom: 30px;
+}
+
+section.hero-headline div.hero-tagline img{
+  width: 16px;
+  height: 16px;
+}
+
+section.hero-headline div.hero-tagline span {
+  font-size: 12px;
+}
+
+section.hero-headline h1.hero-title {
+  font-size: 50px;
+}
+
+section.hero-headline p.hero-subtext {
+  font-size: 15px;
+  margin: 0 auto 24px;
+}
+
+section.hero-headline button {
+  font-size: 15px;
+  padding: 12px 32px;
+}
+
+/* featuer work/projects */
+section.featured-projects {
+  padding: 20px 0 60px;
+}
+
+section.featured-projects h1 {
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+
+section.featured-projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+section.featured-projects .project-card img {
+  height: 250px;
+}
+
+section.featured-projects .project-content {
+  padding: 12px 22px;
+}
+
+section.featured-projects .project-content h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+section.featured-projects .project-content p {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+section.featured-projects .project-content .used-tech-stack span{
+  padding: 2px 8px;
+  font-size: 13px;
+}
+
+section.featured-projects .project-content a.cta-button {
+  padding: 8px 14px;
+  font-size: 15px;
+}
+
+/* =========================
+   ABOUS US PAGE
+========================= */
+section.about-company {
+  padding: 50px 0 30px;
+}
+
+ section.about-company .container {
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+section.about-company .about-text,
+section.about-company .about-image {
+  max-width: 300px;
+  min-width: 260px;
+}
+
+section.about-company .about-text h1 {
+  font-size: 36px;
+}
+
+section.about-company .title-divider {
+  margin: 12px 0 18px 0;
+}
+
+section.about-company .about-text p {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+section.about-company .about-image {
+  border-radius: 16px;
+}
+  
+/* mission vission  */
+section.mission-vision {
+  margin: 20px 0;
+}
+
+section.mission-vision .container {
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+section.mission-vision .mv-card {
+  /* min-width: 420px; */
+}
+
+section.mission-vision .mv-card .mv-content {
+  /* width: 200px */
+  left: 30px;
+}
+
+section.mission-vision .mv-card h3{
+  font-size: 20px;
+}
+
+section.mission-vision .mv-card .title-divider {
+  width: 120px;
+}
+
+section.mission-vision .mv-card p {
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
+/* core values */
+section.core-values {
+  margin-bottom: 20px;
+}
+
+section.core-values .values-flex{
+  flex-wrap: wrap;
+}
+
+section.core-values h2{
+  font-size: 26px;
+}
+
+section.core-values .values-flex .value-card {
+  padding: 18px 30px;
+  margin-bottom: 4px;
+}
+
+section.core-values .values-flex .value-card h3{
+  font-size: 14px;
+}
+
+section.core-values .values-flex .value-card p{
+  font-size: 12px;
+}
+
+/* team */
+section.team .team-flex .team-card .team-profile-picture {
+  margin-bottom: 10px;
+}
+
+section.team .team-flex .team-card .team-profile-picture img {
+  height: auto;
+  max-height: 320px;
+}
+
+section.team .team-title h2 {
+  font-size: 26px;
+}
+
+section.team .team-flex .team-card h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+}
+
+section.team .team-flex .team-card p {
+  font-size: 12px;
+}
+
+
+
+/* =========================
+   CONTACT US PAGE
+========================= */
+
+/* contact headline */
+section.contact-headline {
+  padding: 34px 0 14px 0;
+}
+
+section.contact-headline h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+section.contact-headline p {
+  font-size: 16px;
+}
+
+/* contact infos */
+section.contact-info {
+  padding: 12px 0 16px 0;
+}
+
+section.contact-info ul {
+  gap: 24px;
+}
+
+section.contact-info img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 12px;
+}
+
+/* Send message section */
+section.send-message-section .container {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+section.send-message-section .contact-form {
+  width: 90%;
+  padding: 32px;
+}
+
+section.send-message-section h2 {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+section.send-message-section .contact-grid {
+  column-gap: 18px;
+  row-gap: 14px;
+}
+
+section.send-message-section input,
+section.send-message-section textarea {
+  font-size: 16px;
+}
+
+.contact-form .btn-primary {
+  font-size: 18px;
+}
+
+section.send-message-section .benefits-box {
+  text-align: center;
+}
+
+section.send-message-section .benefits-box p {
+  font-size: 30px;
+  margin-bottom: 22px;
+}
+
+section.send-message-section .benefits-box ul {
+  padding-left: 42px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+section.send-message-section .benefits-box li {
+  line-height: 34px;
+  font-size: 26px;
+  margin-bottom: 8px;
+  padding-left: 24px;
+}
+
+/* Map */
+section.map {
+  padding: 34px;
+}
+
+} 
+
+
+/*##############################*/
+/* Styles for Mobile */
+/*##############################*/

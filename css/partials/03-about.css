@@ -1,0 +1,252 @@
+﻿/* =========================
+   ABOUT US PAGE
+========================= */
+/* about company */
+section.about-company {
+  padding: 80px 0 40px;
+}
+
+section.about-company .container {
+  display: flex;
+  gap: 60px;
+}
+
+section.about-company .about-text,
+section.about-company .about-image {
+  flex: 1;
+}
+
+section.about-company .about-text h1 {
+  font-size: 48px;
+  color: #3e3e3e;
+  margin-bottom: 2px;
+  line-height: 1.2;
+}
+
+section.about-company .title-divider {
+  height: 3px;
+  width: 100%;
+  background-color: #1fa8bd;
+  margin-bottom: 24px;
+  border-radius: 2px;
+  margin: 16px 0 32px 0;
+}
+
+section.about-company .about-text p {
+  font-size: 22px;
+  color: #475569;
+  margin-bottom: 18px;
+  line-height: 1.6;
+}
+
+section.about-company div.about-image img {
+  height: auto;
+  max-width: 100%;
+  border-radius: 16px;
+}
+
+/* mission vission  */
+section.mission-vision {
+  margin: 40px 0;
+}
+
+section.mission-vision .container {
+  display: flex;
+  gap: 30px;
+}
+
+section.mission-vision .mv-card {
+  position: relative;
+  flex: 1;
+  max-height: 360px;
+}
+
+section.mission-vision .mv-card .mv-content {
+  width: 300px;
+  position: absolute;
+  top: 10%;
+  left: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section.mission-vision .mv-card h3{
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+section.mission-vision .mv-card .title-divider {
+  height: 1px;
+  width: 190px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+}
+
+section.mission-vision .mv-card p {
+  font-size: 20px;
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+section.mission-vision .mv-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops nicely */
+  display: block;
+}
+
+/* core values */
+section.core-values {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+section.core-values .core-values-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+section.core-values h2{
+  white-space: nowrap;
+  margin: 0;
+  font-size: 32px;
+  color: #3e3e3e;
+}
+
+section.core-values .title-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #1fa8bd;
+  border-radius: 2px;
+}
+
+section.core-values .values-flex {
+  display: flex;
+  gap: 20px;
+}
+
+section.core-values .values-flex .value-card {
+  flex: 1;
+  background-color:#ffffff;
+  padding: 20px 60px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+section.core-values .values-flex .value-card h3{
+font-size: 20px;
+  font-weight: 600;
+  color: #1f2d3d;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+section.core-values .values-flex .value-card p{
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6c7a89;
+  margin: 0;
+}
+
+section.core-values .value-icon {
+  margin-bottom: 10px;
+}
+
+section.core-values .value-icon img{
+  height: 55px;
+  width: 55px;
+}
+
+/* team */
+section.team {
+  margin-bottom: 40px;
+}
+
+section.team .team-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+section.team .team-title .title-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #1fa8bd;
+  border-radius: 2px;
+}
+
+section.team .team-title h2 {
+  white-space: nowrap;
+  margin: 0;
+  font-size: 32px;
+  color: #3e3e3e;
+}
+
+section.team .team-flex {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+section.team .team-flex .team-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fdff 100%);
+  border: 1px solid #dceef2;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(12, 37, 54, 0.08);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+section.team .team-flex .team-card .team-profile-picture {
+  margin-bottom: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e3eef4;
+}
+
+section.team .team-flex .team-card .team-profile-picture img{
+  width: 100%;
+  height: auto;
+  max-height: 360px;
+  object-fit: contain;
+  background-color: #eef4f7;
+  transition: transform 0.35s ease;
+}
+
+section.team .team-flex .team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(12, 37, 54, 0.14);
+  border-color: #bcdce6;
+}
+
+section.team .team-flex .team-card:hover .team-profile-picture img {
+  transform: none;
+}
+
+section.team .team-flex .team-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: 0.01em;
+  color: #14212f;
+}
+
+section.team .team-flex .team-card p {
+  font-size: 13px;
+  color: #2f5666;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  margin: 0;
+}
+

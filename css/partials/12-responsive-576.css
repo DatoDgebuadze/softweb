@@ -1,0 +1,472 @@
+﻿@media screen and (max-width: 576px) {
+
+.container{
+    width: 92%;
+  max-width: 92%;
+}
+
+/* header */
+ header section.logo img{
+      width: 120px;
+}
+
+/* footer */
+footer {
+  padding: 40px 0 10px;
+}
+
+footer .container {
+  flex-wrap: wrap;
+}
+
+footer ul li.footer-contact {
+  justify-content: center;
+}
+
+footer ul.social-logos {
+  justify-content: center;
+  gap: 36px;
+}
+
+footer ul.social-logos li{
+  margin-bottom: 0;
+}
+
+footer ul.social-logos img {
+  width: 40px;
+}
+
+footer ul {
+  width: 100%;
+  margin-bottom: 12px;
+  text-align: center;
+}  
+
+footer ul:last-of-type {
+  margin-bottom: 0;
+}
+
+/* =========================
+   MAIN/LANDING PAGE
+========================= */
+/* hero section */
+section.hero-section .hero-content {
+  position: initial;
+  text-align: center;
+  padding:20px 0;
+}
+
+section.hero-section .container {
+  align-items: center;
+}
+
+section.hero-section .hero-content h1,
+section.hero-section .hero-content p {
+  color:#3E3E3E;
+  max-width: 460px;
+  margin-bottom: 16px;
+}
+
+section.hero-section .hero-content h1 {
+  font-size: 40px;
+  line-height: 46px;
+}
+
+section.hero-section .hero-content p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+section.hero-section button {
+  width: 140px;
+  height: 40px;
+  font-size: 12px;
+}
+/* stats section */
+section.stats-section .container {
+  padding: 14px 0;
+}
+
+section.stats-section li.stat-divider {
+  height: 50px;
+}
+
+section.stats-section span.stat-number {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+section.stats-section span.stat-label {
+  font-size: 12px;
+}
+/* offer section */
+section.offer-section {
+  padding: 24px 0px 36px 0px;
+}
+
+section.offer-section .offer-header {
+  max-width: 400px;
+  margin: 0 auto 30px;
+}
+
+section.offer-section .offer-header h2 {
+  font-size: 34px;
+  margin-bottom: 6px;
+}
+
+section.offer-section .offer-header p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+section.offer-section .offer-grid {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+section.offer-section .offer-card {
+  margin: 0px 30px;
+  padding: 34px 40px;
+}
+
+section.offer-section .offer-card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
+}
+
+section.offer-section .offer-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+section.offer-section .offer-card p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+/* why softon section */
+
+/* partners section */
+
+section.partners-section {
+  padding: 10px 0 20px 0;
+}
+
+section.partners-section h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.partner-item img {
+  height: 40px;
+}
+
+/* =========================
+   SERVICES PAGE
+========================= */
+
+
+/* =========================
+   PROJECTS PAGE
+========================= */
+/* hero headline cta button */
+section.hero-headline {
+  padding: 40px 20px;
+}
+
+section.hero-headline div.hero-tagline {
+  margin-bottom: 26px;
+}
+
+section.hero-headline div.hero-tagline img{
+  width: 14px;
+  height: 14px;
+}
+
+section.hero-headline div.hero-tagline span {
+  font-size: 11px;
+}
+
+section.hero-headline h1.hero-title {
+  font-size: 42px;
+  line-height: 40px;
+}
+
+section.hero-headline p.hero-subtext {
+  font-size: 14px;
+  margin: 0 auto 20px;
+}
+
+section.hero-headline button {
+  font-size: 14px;
+  padding: 10px 26px;
+}
+
+/* featuer work/projects */
+section.featured-projects {
+  padding: 10px 0 30px;
+}
+
+section.featured-projects h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+section.featured-projects .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 30px;
+}
+
+section.featured-projects .project-card {
+  margin: 0px 26px;
+}
+
+section.featured-projects .project-card img {
+  height: 240px;
+}
+
+section.featured-projects .project-content {
+  padding: 10px 20px;
+}
+
+section.featured-projects .project-content h3 {
+  font-size: 17px;
+  margin-bottom: 4px;
+}
+
+section.featured-projects .project-content p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+section.featured-projects .project-content .used-tech-stack span{
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+section.featured-projects .project-content a.cta-button {
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+/* =========================
+   ABOUS US PAGE
+========================= */
+section.about-company {
+  padding: 30px 0 20px;
+}
+
+section.about-company .container {
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+section.about-company .about-text {
+  /* min-width: 460px; */
+  /* ?????????? needs to be improved */
+}
+
+section.about-company .about-text h1 {
+  font-size: 30px;
+}
+
+section.about-company .title-divider {
+  margin: 10px 0 16px 0;
+}
+
+section.about-company .about-text p {
+  font-size: 14px;
+}
+
+section.about-company div.about-image img {
+  min-width: 300px;
+}
+
+/* mission vission  */
+section.mission-vision {
+  margin: 20px 0;
+}
+
+section.mission-vision .container {
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+section.mission-vision .mv-card {
+  max-width: 300px;
+  min-width: 260px;
+}
+
+section.mission-vision .mv-card .mv-content {
+  width: 200px;
+  top: 12%;
+  left: 30px;
+}
+
+section.mission-vision .mv-card h3{
+  font-size: 20px;
+}
+
+section.mission-vision .mv-card .title-divider {
+  width: 110px;
+}
+
+section.mission-vision .mv-card p {
+  font-size: 14px;
+}
+
+/* core values */
+section.core-values {
+  margin-bottom: 20px;
+}
+
+section.core-values .values-flex{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+section.core-values h2{
+  font-size: 22px;
+}
+
+section.core-values .values-flex .value-card {
+  padding: 16px 26px;
+  margin-bottom: 0;
+}
+
+section.core-values .values-flex .value-card h3{
+  font-size: 14px;
+}
+
+section.core-values .values-flex .value-card p{
+  font-size: 12px;
+}
+
+/* team */
+section.team .team-flex{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 16px;
+}
+
+section.team .team-flex .team-card {
+  padding: 12px;
+}
+
+section.team .team-flex .team-card .team-profile-picture {
+  margin-bottom: 8px;
+}
+
+section.team .team-flex .team-card .team-profile-picture img {
+  height: auto;
+  max-height: 280px;
+}
+
+section.team .team-title h2 {
+  font-size: 22px;
+}
+
+section.team .team-flex .team-card h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+section.team .team-flex .team-card p {
+  font-size: 11px;
+}
+
+
+/* =========================
+   CONTACT US PAGE
+========================= */
+/* contact headline */
+section.contact-headline {
+  padding: 30px 0 12px 0;
+}
+
+section.contact-headline h1 {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+section.contact-headline p {
+  max-width: 320px;
+  font-size: 16px;
+}
+
+/* contact infos */
+section.contact-info {
+  padding: 8px 0 14px 0;
+}
+
+section.contact-info ul {
+  gap: 20px;
+}
+
+section.contact-info img {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+/* Send message section */
+section.send-message-section .container {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+section.send-message-section .contact-form {
+  width: 90%;
+  padding: 26px;
+}
+
+section.send-message-section h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+section.send-message-section .contact-grid {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 12px;
+}
+
+section.send-message-section input,
+section.send-message-section textarea {
+  font-size: 14px;
+}
+
+.contact-form .btn-primary {
+  font-size: 14px;
+}
+
+section.send-message-section .benefits-box {
+  text-align: center;
+}
+
+section.send-message-section .benefits-box p {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+section.send-message-section .benefits-box ul {
+    padding-left: 42px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+}
+
+section.send-message-section .benefits-box li {
+  line-height: 28px;
+  font-size: 22px;
+  margin-bottom: 8px;
+  padding-left: 24px;
+}
+
+/* Map */
+section.map {
+  padding: 10px 30px 30px;
+}
+
+} 
