@@ -1,0 +1,128 @@
+.cookie-banner {
+  position: fixed;
+  left: 24px;
+  right: 24px;
+  bottom: 24px;
+  z-index: 99999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 22px;
+  pointer-events: auto;
+  background: linear-gradient(145deg, #ffffff, #f3faf8);
+  color: #3e3e3e;
+  border: 1px solid #cfe3d8;
+  border-radius: 18px;
+  padding: 18px 20px;
+  box-shadow: 0 14px 36px rgba(35, 66, 54, 0.2);
+}
+
+.cookie-banner[hidden] {
+  display: none !important;
+}
+
+.cookie-banner-content {
+  max-width: 760px;
+}
+
+.cookie-banner h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #2e4e3b;
+}
+
+.cookie-banner p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #4b5563;
+}
+
+.cookie-manage-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #1fa8bd;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.cookie-manage-link:hover {
+  color: #167c8d;
+}
+
+.cookie-banner-actions {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.cookie-btn {
+  border-radius: 22px;
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.cookie-btn:focus-visible,
+.cookie-manage-link:focus-visible {
+  outline: 2px solid #1fa8bd;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+.cookie-btn-accept {
+  background: #1fa8bd;
+  border-color: #1fa8bd;
+  color: #ffffff;
+}
+
+.cookie-btn-accept:hover {
+  background: #18879a;
+  border-color: #18879a;
+  transform: translateY(-2px);
+}
+
+.cookie-btn-reject {
+  background: #ffffff;
+  border-color: #9bc8b3;
+  color: #2e4e3b;
+}
+
+.cookie-btn-reject:hover {
+  border-color: #2e4e3b;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  .cookie-banner {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .cookie-banner h2 {
+    font-size: 18px;
+  }
+
+  .cookie-banner p {
+    font-size: 14px;
+  }
+
+  .cookie-banner-actions {
+    width: 100%;
+    justify-content: stretch;
+  }
+
+  .cookie-btn {
+    flex: 1 1 auto;
+  }
+}

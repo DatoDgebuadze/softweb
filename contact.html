@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=20260228">
+  <link rel="stylesheet" href="css/partials/99-cookie-banner.css?v=20260228">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link href='https://fonts.googleapis.com/css?family=Heebo' rel='stylesheet'>
   <meta charset="UTF-8">
@@ -184,12 +185,30 @@
   <section class="copyright">
     <span data-i18n="copyright">2026 &reg; All Rights Reserved</span>
   </section>
-  <script src="js/menu.js" defer></script>
-  <script src="js/i18n.js" defer></script>
-  <script src="js/main.js" defer></script>
+  <div id="cookie-banner" class="cookie-banner" hidden role="dialog" aria-live="polite" aria-modal="false" aria-labelledby="cookie-banner-title" aria-describedby="cookie-banner-text">
+    <div class="cookie-banner-content">
+      <h2 id="cookie-banner-title" data-i18n="cookie_title">Cookie Preferences</h2>
+      <p id="cookie-banner-text" data-i18n="cookie_message">We use cookies to remember your language preference and improve your browsing experience.</p>
+      <a href="contact.html#send-message" id="cookie-manage" class="cookie-manage-link" data-i18n="cookie_manage">Manage preferences</a>
+    </div>
+    <div class="cookie-banner-actions">
+      <button type="button" id="cookie-reject" class="cookie-btn cookie-btn-reject" data-i18n="cookie_reject">Reject</button>
+      <button type="button" id="cookie-accept" class="cookie-btn cookie-btn-accept" data-i18n="cookie_accept">Accept</button>
+    </div>
+  </div>
+  <script src="js/menu.js?v=20260228" defer></script>
+  <script src="js/cookies.js?v=20260228" defer></script>
+  <script src="js/i18n.js?v=20260228" defer></script>
+  <script src="js/main.js?v=20260228" defer></script>
 </body>
 
 </html>
+
+
+
+
+
+
 
 
 
