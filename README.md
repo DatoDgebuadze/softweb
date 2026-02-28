@@ -31,7 +31,7 @@ The website is built to:
 - Sticky header navigation
 - Mobile hamburger menu
 - EN/KA language switching via client-side i18n
-- Persistent language selection using `localStorage`
+- Persistent language selection using consented cookies with `localStorage` fallback
 - Reusable footer navigation across pages
 
 ## Tech Stack
@@ -105,6 +105,7 @@ Implementation pattern:
 - `data-i18n="key"` for text nodes
 - `data-i18n-attr="attribute:key"` for attributes (e.g., `placeholder`)
 - Add matching keys in both dictionaries (`en`, `ka`)
+- Language persistence is cookie-first (`softon_language`) when consent is accepted, with `localStorage` fallback
 
 ## Design & UX Direction
 

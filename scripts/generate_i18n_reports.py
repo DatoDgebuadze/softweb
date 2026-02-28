@@ -85,8 +85,8 @@ def make_overview_rows(html_keys, js_keys):
         {
             "section": "Architecture",
             "metric": "Storage",
-            "value": "localStorage key: softon_language",
-            "evidence": "js/main.js",
+            "value": "Cookie-first (softon_language) with localStorage fallback",
+            "evidence": "js/i18n.js + js/cookies.js",
         },
         {
             "section": "Architecture",
@@ -133,8 +133,8 @@ def make_functions_rows():
             "function": "applyLanguage(language)",
             "purpose": "Applies i18n to text + attributes",
             "inputs": "language string",
-            "outputs": "DOM text/attr updates + localStorage save",
-            "location": "js/main.js:162",
+            "outputs": "DOM text/attr updates + cookie/localStorage persistence",
+            "location": "js/i18n.js",
             "extension_rule": "Do not bypass; always call after language change",
         },
         {

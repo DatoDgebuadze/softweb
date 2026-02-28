@@ -6,7 +6,24 @@
     storageKey = "softon_language",
     defaultLanguage = "en"
   }) => {
-    let currentLanguage = localStorage.getItem(storageKey) || defaultLanguage;
+    const cookieApi = window.SoftonCookies;
+    const getStoredLanguage = () => {
+      const cookieLanguage = cookieApi?.getCookie?.(storageKey);
+      if (cookieLanguage) return cookieLanguage;
+      return localStorage.getItem(storageKey);
+    };
+
+    const persistLanguage = (language) => {
+      if (cookieApi?.hasConsent?.() && cookieApi?.setCookie) {
+        cookieApi.setCookie(storageKey, language, 180);
+        return;
+      }
+
+      localStorage.setItem(storageKey, language);
+      cookieApi?.deleteCookie?.(storageKey);
+    };
+
+    let currentLanguage = getStoredLanguage() || defaultLanguage;
 
     const applyLanguage = (language) => {
       const selectedLanguage = translations[language] ? language : defaultLanguage;
@@ -37,7 +54,8 @@
         }
       }
 
-      localStorage.setItem(storageKey, selectedLanguage);
+      persistLanguage(selectedLanguage);
+
       currentLanguage = selectedLanguage;
     };
 
