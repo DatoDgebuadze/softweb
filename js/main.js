@@ -118,10 +118,8 @@
       about_value4_desc:
         "We build long-term relationships and treat every project as our own.",
       about_team_title: "Meet Our Team",
-      team_member1_name: "Davit Dgebuadze",
-      team_member1_role: "Founder & Chief Executive Officer",
-      team_member2_name: "Ani Chichua",
-      team_member2_role: "Product & Operations Lead",
+      team_member1_name: "Not disclosed for now",
+      team_member2_name: "Not disclosed for now",
       contact_title: "Contact Us",
       contact_subtitle:
         "Tell us about your idea, project, or challenge - our team will get back to you shortly.",
@@ -142,6 +140,12 @@
       contact_why_clear: "Transparent communication",
       contact_why_experienced: "Experienced engineering team",
       contact_why_support: "Long-term product support",
+      cookie_title: "Cookie Preferences",
+      cookie_message:
+        "We use cookies to remember your language preference and improve your browsing experience.",
+      cookie_manage: "Manage preferences",
+      cookie_accept: "Accept",
+      cookie_reject: "Reject",
       our_partner:"Our Partners"
     },
     ka: {
@@ -256,10 +260,8 @@
       about_value4_desc:
         "ვქმნით გრძელვადიან ურთიერთობებს და თითოეულ პროექტს საკუთარად ვუდგებით.",
       about_team_title: "გაიცანით ჩვენი გუნდი",
-      team_member1_name: "დავით დგებუაძე",
-      team_member1_role: "დამფუძნებელი და გენერალური დირექტორი",
-      team_member2_name: "ანი ჩიჩუა",
-      team_member2_role: "პროდუქტისა და ოპერაციების ხელმძღვანელი",
+      team_member1_name: "ამ ეტაპზე არ არის გამჟღავნებული",
+      team_member2_name: "ამ ეტაპზე არ არის გამჟღავნებული",
       contact_title: "დაგვიკავშირდით",
       contact_subtitle:
         "მოგვწერეთ თქვენი იდეის, პროექტის ან გამოწვევის შესახებ - ჩვენი გუნდი მალე დაგიბრუნდებათ.",
@@ -280,6 +282,12 @@
       contact_why_clear: "გამჭვირვალე კომუნიკაცია",
       contact_why_experienced: "გამოცდილი საინჟინრო გუნდი",
       contact_why_support: "პროდუქტის გრძელვადიანი მხარდაჭერა",
+      cookie_title: "ქუქის პრეფერენციები",
+      cookie_message:
+        "ვიყენებთ ქუქიებს ენის არჩევანის დასამახსოვრებლად და გამოცდილების გასაუმჯობესებლად.",
+      cookie_manage: "პრეფერენციების მართვა",
+      cookie_accept: "დათანხმება",
+      cookie_reject: "უარყოფა",
       our_partner:"ჩვენი პარტნიორები"
     }
   };
@@ -385,6 +393,16 @@
   });
 
   if (i18n) i18n.init();
+
+  const cookieBanner = document.getElementById("cookie-banner");
+  const cookieAccept = document.getElementById("cookie-accept");
+  const cookieReject = document.getElementById("cookie-reject");
+  window.SoftonCookies?.initConsentBanner({
+    banner: cookieBanner,
+    acceptButton: cookieAccept,
+    rejectButton: cookieReject,
+    languageStorageKey: LANGUAGE_STORAGE_KEY
+  });
 
   if (langToggle && i18n) {
     langToggle.addEventListener("click", () => {
