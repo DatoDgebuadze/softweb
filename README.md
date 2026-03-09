@@ -43,6 +43,26 @@ The website is built to:
 
 No framework or build step is required.
 
+## Docker
+
+Build the image:
+
+```bash
+docker build -t softon-site .
+```
+
+Run the container:
+
+```bash
+docker run --rm -p 8080:80 softon-site
+```
+
+Then open:
+
+```text
+http://localhost:8080
+```
+
 ## Project Structure
 
 ```text
